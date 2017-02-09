@@ -3,14 +3,14 @@
 from __future__ import division, absolute_import, print_function, unicode_literals
 import logging
 
-from pykot.api import Api
+from pykot.api import V1Api
 
 
 class Client(object):
 
     def __init__(self, access_token=None):
         self.log = logging.getLogger('{0.__module__}.{0.__name__}'.format(self.__class__))
-        self.api = Api(access_token)
+        self.api = V1Api(access_token)
 
     @property
     def access_token(self):

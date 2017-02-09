@@ -5,10 +5,9 @@ import logging
 import requests
 
 
-class Api(object):
-    #BASE_URL = 'https://api.kingtime.co.jp'
-    BASE_URL = 'http://echo.jsontest.com'
-
+class V1Api(object):
+    BASE_URL = 'https://api.kingtime.co.jp/v1.0'
+    # BASE_URL = 'http://echo.jsontest.com'
 
     def __init__(self, access_token=None):
         self.log = logging.getLogger('{0.__module__}.{0.__name__}'.format(self.__class__))
